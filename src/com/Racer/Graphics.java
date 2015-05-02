@@ -9,11 +9,12 @@ public class Graphics
 	private Player Player = new Player();
 	private Texture bg = new Texture("data/bg.png");
 	private EnemieManager Enemies = new EnemieManager();
+	private MapManager Map = new MapManager();
 	
 	public void draw()
 	{
 		Screen.begin();
-		Screen.draw(bg, 0, 0);
+		Map.draw(Screen);
 		Enemies.updateDamage(Player.returnBullets());
 		Enemies.draw(Screen);
 		Player.getInput();

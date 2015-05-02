@@ -1,19 +1,22 @@
 package com.Racer;
 
 import com.badlogic.gdx.ApplicationListener;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.backends.openal.Mp3.Music;
 
 public class Adventure implements ApplicationListener {
 	private Graphics Graphics;
+	private Sound Sound;
+	
 	
 	@Override
 	public void create() {
 		this.Graphics = new Graphics();
-		
+		this.Sound = new Sound();
 	}
 
 	@Override
 	public void dispose() {
-		// TODO Auto-generated method stub
 		
 	}
 
