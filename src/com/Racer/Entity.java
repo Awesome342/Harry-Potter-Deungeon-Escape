@@ -8,6 +8,7 @@ public class Entity {
 	private Texture Img;
 	private TextureRegion Clip;
 	private Rect Pos;
+	protected int clipx, clipy;
 	
 	public Entity(String filename, int x, int y, int clipx, int clipy, int w, int h)
 	{
@@ -21,21 +22,26 @@ public class Entity {
 		batch.draw(Clip, (int)Pos.x, (int)Pos.y);
 	}
 	
-	public void move(String dir, double speed)
+	public void setClip(int clipx, int clipy, int w, int h)
 	{
-		if (dir.equals("R"))
+		Clip = new TextureRegion(Img, clipx, clipy, w, h);
+	}
+	
+	public void move(char dir, double speed)
+	{
+		if (dir == 'R')
 		{
 			Pos.x += speed;
 		}
-		else if (dir.equals("L"))
+		else if (dir == 'L')
 		{
 			Pos.x -= speed;
 		}
-		else if (dir.equals("U"))
+		else if (dir == 'U')
 		{
 			Pos.y += speed;
 		}
-		else if (dir.equals("D"))
+		else if (dir == 'D')
 		{
 			Pos.y -= speed;
 		}

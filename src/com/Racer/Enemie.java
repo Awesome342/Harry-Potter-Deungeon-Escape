@@ -9,7 +9,7 @@ public class Enemie extends Entity
 {
 	private Random Rand = new Random();
 	private boolean IsActive = false;
-	private String dir = "D";
+	private char dir = 'D';
 	
 	//bullet stuff
 	ArrayList<Bullet> bullets = new ArrayList<>();

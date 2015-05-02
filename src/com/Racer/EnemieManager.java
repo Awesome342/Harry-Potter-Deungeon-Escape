@@ -14,7 +14,7 @@ public class EnemieManager
 	{
 		for (int i = 0; i < amount; i++)
 		{
-			Enemies.add(new Enemie("data/Coa2.png"));
+			Enemies.add(new Enemie("data/enemy.png"));
 		}
 		Enemies.get(0).spawn();
 	}

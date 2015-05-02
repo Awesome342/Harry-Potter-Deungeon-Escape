@@ -6,12 +6,12 @@ public class Bullet extends Entity {
 
 	private boolean IsShooting = false;
 	private boolean IsDead = false;//Used to 
-	private String Dir;
+	private char Dir;
 	
 	public Bullet()
 	{
 		super("data/block.png", 0, 0, 0, 0, 32, 32);
-		Dir = new String("U");
+		Dir = 'U';
 	}
 	
 	public void draw(SpriteBatch Screen)
@@ -22,7 +22,7 @@ public class Bullet extends Entity {
 		}
 	}
 	
-	public void shoot(double x, double y, String Dir)
+	public void shoot(double x, double y, char Dir)
 	{
 		if (IsShooting == false)
 		{
