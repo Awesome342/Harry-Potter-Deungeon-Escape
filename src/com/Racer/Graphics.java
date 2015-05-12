@@ -14,9 +14,10 @@ public class Graphics
 	public void draw()
 	{
 		Screen.begin();
+		Map.update(Player);
 		Map.draw(Screen);
 		Enemies.updateDamage(Player.returnBullets());
-		Enemies.draw(Screen);
+		Enemies.draw(Screen, Player);
 		Player.getInput();
 		Player.draw(Screen);
 		Screen.end();

@@ -4,7 +4,8 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.openal.Mp3.Music;
 
-public class Adventure implements ApplicationListener {
+public class Adventure implements ApplicationListener 
+{
 	private Graphics Graphics;
 	private Sound Sound;
 	
@@ -12,7 +13,7 @@ public class Adventure implements ApplicationListener {
 	@Override
 	public void create() {
 		this.Graphics = new Graphics();
-		this.Sound = new Sound();
+		//this.Sound = new Sound();
 	}
 
 	@Override

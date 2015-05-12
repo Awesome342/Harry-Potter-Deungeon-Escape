@@ -14,16 +14,16 @@ public class EnemieManager
 	{
 		for (int i = 0; i < amount; i++)
 		{
-			Enemies.add(new Enemie("data/enemy.png"));
+			Enemies.add(new Enemie("data/enemy.png", 64, 448, 64, 448));
 		}
 		Enemies.get(0).spawn();
 	}
 	
-	public void draw(SpriteBatch Screen)
+	public void draw(SpriteBatch Screen, Player Hero)
 	{
 		for (int i = 0; i < amount; i++)
 		{
-			Enemies.get(i).draw(Screen);
+			Enemies.get(i).draw(Screen, Hero);
 		}
 	}
 	
@@ -32,6 +32,7 @@ public class EnemieManager
 		for (Enemie i : Enemies)
 		{
 			i.updateDamage(Bullets);
+			i.handleShooting();
 		}
 		
 		if (Enemies.get(0).returnIsActive() == false)
